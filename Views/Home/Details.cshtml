@@ -1,0 +1,48 @@
+﻿@model EF_DBFirst_Approach.Models.EmployeeViewModel
+
+@{
+    ViewData["Title"] = "Employee Details";
+}
+
+@*<h1>Employee Details</h1>*@
+
+<div>
+    <h4>Employee @Html.DisplayFor(model => model.EmployeeName)'s Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmployeeName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmployeeName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SkillID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SkillID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Skill)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Skill)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.YearsExperience)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.YearsExperience)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.EmployeeID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
